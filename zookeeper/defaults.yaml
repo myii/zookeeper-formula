@@ -31,4 +31,4 @@ zookeeper:
     initLimit: 5
     syncLimit: 2
 
-    customservers: ''
+    customservers: {}
