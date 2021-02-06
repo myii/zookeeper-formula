@@ -1,0 +1,28 @@
+# yamllint disable rule:indentation rule:line-length
+# Amazon Linux-2
+---
+values:
+  arch: amd64
+  config: zoo.cfg
+  pkg:
+    downloadurl: 'https://mirror.csclub.uwaterloo.ca/apache/zookeeper/zookeeper-3.6.2/apache-zookeeper-3.6.2-bin.tar.gz
+'
+    installdir: /opt
+    javajdk: ''
+    name: zookeeper
+    version: 3.6.2
+  rootgroup: root
+  service:
+    name: zookeeper
+  systemdconfig:
+    group: root
+    limitnofile: 50000
+    limitnproc: 10000
+    user: root
+  zookeeperproperties:
+    clientPort: 2181
+    customservers: {}
+    dataDir: ./state/zookeeper
+    initLimit: 5
+    syncLimit: 2
+    tickTime: 2000
