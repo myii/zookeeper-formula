@@ -7,7 +7,14 @@
 
 zookeeper-dependency-install-pkg-installed:
   pkg.installed:
-    - name: tar
+    - pkgs:
+      {%- if grains.os_family == "Gentoo" %}
+      - app-arch/tar
+      - app-arch/gzip
+      {%- else %}
+      - tar
+      - gzip
+      {%- endif %}
 
 zookeeper-package-install-pkg-installed:
   archive.extracted:
