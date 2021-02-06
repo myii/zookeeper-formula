@@ -310,9 +310,9 @@ suites:
         base:
           '*':
             - zookeeper._mapdata
-            - sun-java
-            - sun-java.env
-            - zookeeper
+            # - sun-java
+            # - sun-java.env
+            # - zookeeper
       pillars:
         top.sls:
           base:
@@ -322,10 +322,10 @@ suites:
       pillars_from_files:
         zookeeper.sls: pillar.example
         sun-java.sls: test/salt/pillar/sun-java.sls
-      dependencies:
-        - name: sun-java
-          repo: git
-          source: https://github.com/saltstack-formulas/sun-java-formula.git
+    #   dependencies:
+    #     - name: sun-java
+    #       repo: git
+    #       source: https://github.com/saltstack-formulas/sun-java-formula.git
     verifier:
       inspec_tests:
         - path: test/integration/default
