@@ -309,6 +309,7 @@ suites:
       state_top:
         base:
           '*':
+            - zookeeper._mapdata
             - sun-java
             - sun-java.env
             - zookeeper
