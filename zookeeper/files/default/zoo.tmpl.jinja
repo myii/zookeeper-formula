@@ -6,6 +6,7 @@ tickTime={{ zookeeper.zookeeperproperties.tickTime }}
 dataDir={{ zookeeper.zookeeperproperties.dataDir }}
 initLimit={{ zookeeper.zookeeperproperties.initLimit }}
 syncLimit={{ zookeeper.zookeeperproperties.syncLimit }}
+4lw.commands.whitelist={{ zookeeper.zookeeperproperties['4lw.commands.whitelist'] }}
 {%- if ['zookeeper.zookeeperproperties.clientPort'] %}
 clientPort={{ zookeeper.zookeeperproperties.clientPort }}
 {%- endif %}

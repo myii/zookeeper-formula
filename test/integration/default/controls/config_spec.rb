@@ -9,7 +9,7 @@ control 'zookeeper configuration' do
     it { should be_grouped_into 'root' }
     its('mode') { should cmp '0644' }
     its('content') do
-      should eq <<~ZOO_CFG
+      should include <<~ZOO_CFG
         ########################################################################
         # File managed by Salt at <salt://zookeeper/files/default/zoo.tmpl.jinja>.
         # Your changes will be overwritten.
@@ -18,6 +18,7 @@ control 'zookeeper configuration' do
         dataDir=./state/zookeeper
         initLimit=5
         syncLimit=2
+        4lw.commands.whitelist=*
         clientPort=2181
       ZOO_CFG
     end

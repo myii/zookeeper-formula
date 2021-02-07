@@ -20,6 +20,7 @@ values:
     limitnproc: 10000
     user: root
   zookeeperproperties:
+    4lw.commands.whitelist: "*"
     clientPort: 2181
     customservers: {}
     dataDir: ./state/zookeeper
