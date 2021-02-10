@@ -11,9 +11,11 @@ zookeeper-dependency-install-pkg-installed:
       {%- if grains.os_family == "Gentoo" %}
       - app-arch/tar
       - app-arch/gzip
+      - net-analyzer/netcat
       {%- else %}
       - tar
       - gzip
+      - netcat
       {%- endif %}
 
 zookeeper-package-install-pkg-installed:
